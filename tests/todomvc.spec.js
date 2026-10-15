@@ -41,7 +41,7 @@ test('page loads, creates a todo and toggles its state without runtime errors', 
     }
   });
 
-  await page.goto('/', { waitUntil: 'networkidle' });
+  await page.goto('/todomvc/', { waitUntil: 'networkidle' });
 
   await expect(page).toHaveTitle(/TodoMVC/);
   await expect(page.getByRole('heading', { name: 'todos' })).toBeVisible();
